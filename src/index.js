@@ -6,6 +6,8 @@ const exphbs = require('express-handlebars');
 
 //use framework
 const app = express();
+//read static file
+app.use(express.static(path.join(__dirname, 'public')))
 //HTTP logger
 app.use(morgan('combined'));
 
